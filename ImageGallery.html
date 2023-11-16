@@ -183,9 +183,10 @@
       Movie
     </h1>
   </div>
-  <h2 class="mx-3">Categories</h2>
+  <h2 class="mx-3">Genre</h2>
   <div class="line mx-3"></div>
   <div class="container mx-1">
+      <button type="button" class="btn btn-outline-light mx-2">All Genre</button>
       <button type="button" class="btn btn-outline-light mx-2">Action</button>
       <button type="button" class="btn btn-outline-light mx-2">Thriller</button>
       <button type="button" class="btn btn-outline-light mx-2">Crimes</button>
@@ -210,6 +211,16 @@
 
   </div>
   <script> 
+    $(document).ready(function(){
+      $("button").click(function(){
+        $("p").toggle();
+      });
+    });
+    $(document).ready(function(){
+      $("button").click(function(){
+        $("p").toggle();
+      });
+    });
     $(document).ready(function(){
       $("button").click(function(){
         $("p").toggle();
