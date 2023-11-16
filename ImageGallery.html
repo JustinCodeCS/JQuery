@@ -7,6 +7,12 @@
       min-height: 90px;
       min-width: 90px;
       aspect-ratio: 4/3;
+      transition: .5s ease;
+      opacity: 1;
+      backface-visibility: hidden;
+
+
+
     }
     * {
       box-sizing: border-box;
@@ -19,20 +25,7 @@
       padding-bottom: 10%;
       gap: 2rem;
     }
-    
 
-    .column {
-      float: left;
-      width: 50%;
-      padding: 10px;
-      height: 300px; 
-    }
-    
-    .row:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
 
 
     hr {
@@ -118,16 +111,16 @@
         -ms-transform: translate(-50%, -50%)
       }
       
-      .containerLOL:hover .image {
+      .img:hover .img {
         opacity: 0.3;
       }
       
-      .containerLOL:hover .middle {
+      .img:hover .middle {
         opacity: 1;
       }
       
       .text {
-        color: black;
+        color: white;
         font-size: 12px;
         padding: 1px 32px;
       }
@@ -159,13 +152,13 @@
             <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="afq.html">Accordion FAQs</a>
+            <a class="nav-link" href="afq.html">Accordion FAQs</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Imenu.html">Interactive Menu</a>
+            <a class="nav-link" href="menu.html">Interactive Menu</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="ImageGallery.html">Image Gallery</a>
+            <a class="nav-link active" aria-current="page" href="ImageGallery.html">Image Gallery</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="calculator.html">Dynamic Price Calculator</a>
@@ -186,24 +179,24 @@
   <h2 class="mx-3">Genre</h2>
   <div class="line mx-3"></div>
   <div class="container mx-1">
-      <button type="button" class="btn btn-outline-light mx-2">All Genre</button>
-      <button type="button" class="btn btn-outline-light mx-2">Action</button>
-      <button type="button" class="btn btn-outline-light mx-2">Thriller</button>
-      <button type="button" class="btn btn-outline-light mx-2">Crimes</button>
+      <button type="button" id="all" class="btn btn-outline-light mx-2">All Genre</button>
+      <button type="button" id="action" class="btn btn-outline-light mx-2">Action</button>
+      <button type="button" id="thriller"  class="btn btn-outline-light mx-2">Thriller</button>
+      <button type="button" id="crime" class="btn btn-outline-light mx-2">Crime</button>
   </div>
   </div>
   <div class="items">
-    <div class="img img1 mx-4 my-4 "></div>
-    <div class="img img2 mx-4 my-4 "></div>
-    <div class="img img3 mx-4 my-4 "></div>
-    <div class="img img4 mx-4 my-4 "></div>
-    <div class="img img5 mx-4 my-4 "></div>
-    <div class="img img6 mx-4 my-4 "></div>
-    <div class="img img7 mx-4 my-4 "></div>
-    <div class="img img8 mx-4 my-4 "></div>
-    <div class="img img9 mx-4 my-4 "></div>
-    <div class="img img10 mx-4 my-4 "></div>
-
+    <div class="img img1 mx-4 my-4 action shadow-lg rounded "></div>
+    <div class="img img2 mx-4 my-4 action shadow-lg rounded "></div>
+    <div class="img img3 mx-4 my-4 action shadow-lg rounded "></div>
+    <div class="img img4 mx-4 my-4 action shadow-lg rounded "></div>
+    <div class="img img5 mx-4 my-4 thriller shadow-lg rounded "></div>
+    <div class="img img6 mx-4 my-4 thriller shadow-lg rounded "></div>
+    <div class="img img7 mx-4 my-4 thriller shadow-lg rounded "></div>
+    <div class="img img8 mx-4 my-4 crime shadow-lg rounded "></div>
+    <div class="img img9 mx-4 my-4 crime shadow-lg rounded "></div>
+    <div class="img img10 mx-4 my-4 crime shadow-lg rounded "></div>
+    
 
 
 
@@ -212,20 +205,28 @@
   </div>
   <script> 
     $(document).ready(function(){
-      $("button").click(function(){
-        $("p").toggle();
+      $("#all").click(function(){
+        $('.img').show();
       });
     });
-    $(document).ready(function(){
-      $("button").click(function(){
-        $("p").toggle();
+    
+      $("#thriller").click(function(){
+        $(".thriller").show();
+        $(".crime").hide();
+        $(".action").hide();
       });
-    });
-    $(document).ready(function(){
-      $("button").click(function(){
-        $("p").toggle();
+      $("#action").click(function(){
+        $(".thriller").hide();
+        $(".crime").hide();
+        $(".action").show();
       });
-    });
+      $("#crime").click(function(){
+        $(".thriller").hide();
+        $(".crime").show();
+        $(".action").hide();
+      });
+
+
   </script>
 </body>
 </html>
