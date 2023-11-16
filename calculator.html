@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+
+
+    .card {
+      border: 4px solid #ccc;
+      padding: 20px;
+      width: 300px;
+      text-align: center;
+      background-color: #343a40;
+      color: white;
+      position: absolute;
+      top: 27%;
+      left: 37%;
+
+
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    select, input {
+      margin-bottom: 15px;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      function updateTotalPrice() {
+        var productPrice = parseFloat($("#product").val());
+        var quantity = parseInt($("#quantity").val());
+        var totalPrice = productPrice * quantity;
+
+        $("#totalPrice").text("$" + totalPrice.toFixed(2));
+      }
+
+      $("#product, #quantity").change(function() {
+        updateTotalPrice();
+      });
+
+      updateTotalPrice();
+    });
+  </script>
+
+  <title>Jquery</title>
+
+</head>
+<style> 
+  #panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #343a40;
+    border: solid 1px fffffff;
+
+  }
+  
+  #panel {
+    padding: 50px;
+    display: none;
+  }
+  </style>
+<body class="bg-dark text-light">
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">JQuery</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="afq.html">Accordion FAQs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="menu.html">Interactive Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ImageGallery.html">Image Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="calculator.html">Dynamic Price Calculator</a>
+          </li>
+ 
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <h1 class="display-4 d-flex justify-content-center">
+      Calculator
+    </h1>
+  </div>
+
+  <div class="card mx-3 d-flex justify-content-center">
+    <h2>Dynamic Price calculator</h2>
+  
+    <label for="product">Choose a product:</label>
+    <select id="product">
+      <option value="5">Burger ($5)</option>
+      <option value="12">Hotdog ($12)</option>
+      <option value="10">Spaghetti ($10)</option>
+    </select>
+  
+    <label for="quantity">Choose quantity (1-5):</label>
+    <input type="number" id="quantity" min="1" max="5" value="1">
+  
+    <h3>Total Price: <span id="totalPrice">$5.00</span></h3>
+  </div>
+  
+  <script> 
+    let number4 = 1;
+    let number = 1;
+    let number2 = 1;
+    let number3 = 1;
+    $(document).ready(function(){
+      $(".card-body p").hide();
+      $(".card").hover(function(){
+          $(this).find(".card-body p").slideDown("slow");
+      }, function(){
+          $(this).find(".card-body p").slideUp("slow");
+      });
+  });
+    </script>
+</body>
+</html>
