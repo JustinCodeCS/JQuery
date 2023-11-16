@@ -1,0 +1,24 @@
+body {
+  background-color: #343a40; 
+  color: #ffffff; 
+}
+#panel, #panel1, #panel2 {
+  margin-top: 1.2%;
+  padding: 2% 2%;
+  text-align: center;
+  background-color: #343a40;
+  border: solid 1px #ffffff;
+
+}
+#flip, #flip1, #flip2{
+  margin-top: 1.2%;
+  padding: 3% 3%;
+  text-align: center;
+  background-color: #343a40;
+  border: solid 1px #ffffff;
+}
+
+#panel, #panel1, #panel2{
+  padding: 50px;
+  display: none;
+}
