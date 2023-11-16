@@ -27,21 +27,16 @@
             <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Accordion FAQs</a>
+            <a class="nav-link active" aria-current="page" href="afq.html">Accordion FAQs</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">new FAQs</a>
+            <a class="nav-link" href="Imenu.html">Interactive Menu</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
+          <li class="nav-item">
+            <a class="nav-link" href="ImageGallery.html">Image Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="calculator.html">Dynamic Price Calculator</a>
           </li>
           <li class="nav-item">
             <a class="nav-link disabled" aria-disabled="true">Disabled</a>
@@ -52,12 +47,17 @@
     </div>
   </nav>
   <div class="container">
+    <h1 class="display-4 d-flex justify-content-center">
+      Questions
+    </h1>
+  </div>
+  <div class="container">
     <div id="flip">Question 1: What is the world's largest ocean?</div>
     <div id="panel">Answer: The Pacific Ocean is the largest ocean on Earth, covering an area of about 63 million square miles (165 million square kilometers).</div>
   </div>
   <div class="container">
     <div id="flip1">Question 2: How many continents are there in the world?</div>
-    <div id="panel1"> There are seven continents: Africa, Antarctica, Asia, Europe, North America, Australia, and South America.</div>
+    <div id="panel1"> Answer: There are seven continents: Africa, Antarctica, Asia, Europe, North America, Australia, and South America.</div>
   </div>
   <div class="container">
     <div id="flip2">Question 3: What is the only planet in our solar system that rotates clockwise?</div>
@@ -79,6 +79,11 @@
         $("#panel2",).slideToggle("slow");
       });
     });
+    $(document).ready(function(){
+  $("button").click(function(){
+    $("p").toggle();
+  });
+});
     </script>
 </body>
 </html>

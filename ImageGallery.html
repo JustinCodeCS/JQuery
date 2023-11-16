@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    .img{
+      width: 19%;
+      min-height: 90px;
+      min-width: 90px;
+      aspect-ratio: 4/3;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    .items{
+      width: 100%;
+      display: flex;
+      align-content: flex-start;
+      flex-wrap: wrap;
+      padding-bottom: 10%;
+      gap: 2rem;
+    }
+    
+
+    .column {
+      float: left;
+      width: 50%;
+      padding: 10px;
+      height: 300px; 
+    }
+    
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+
+    hr {
+      border: none; 
+      height: 1px; 
+      background-color: gray; 
+      margin: 20px 20px; 
+
+    }
+      .line {
+        border-top: 2px solid gray;
+        width: calc(100% - 40px); 
+        margin: 20px;
+      }
+      .Acontainer {
+        width: 100%;
+        display: flex;
+        align-content: flex-start;
+        flex-wrap: wrap;
+        padding-bottom: 10%;
+        gap: 2rem;
+
+      }
+
+      .img1{
+        background-image: url("https://i.pinimg.com/564x/17/71/c4/1771c42de22d84d9fa4f984b8f4a0038.jpg");
+        background-size: cover;
+      }
+      
+      .img2{
+        background-image: url("https://i.pinimg.com/564x/ae/23/e0/ae23e08db046a5d8a35fe8eedfa09bd9.jpg");
+        background-size: cover;
+
+      }
+      .img3{
+        background-image: url("https://i.pinimg.com/564x/fa/1c/96/fa1c961a6993e1d41be28d001d295775.jpg");
+        background-size: cover;
+
+      }
+      .img4{
+        background-image: url("https://i.pinimg.com/564x/1c/a2/20/1ca220296afa7ed29fc3cb4f2f27432b.jpg");
+        background-size: cover;
+
+      }
+      .img5{
+        background-image: url("https://i.pinimg.com/564x/de/d1/c6/ded1c624dfdb8fde5e95598fa12cab35.jpg");
+        background-size: cover;
+
+      }
+      .img6{
+        background-image: url("https://i.pinimg.com/736x/88/f1/a3/88f1a3a46e6cafa5c6e8ccb2f7fdaa66.jpg");
+        background-size: cover;
+
+      }
+      .img7{
+        background-image: url("https://i.pinimg.com/736x/b7/da/3e/b7da3e27f17aee01be41c892ed447b1d.jpg");
+        background-size: cover;
+
+      }
+      .img8{
+        background-image: url("https://i.pinimg.com/564x/a5/39/e1/a539e12124d55ea6ac8dfb48dd32e822.jpg");
+        background-size: cover;
+
+      }
+      .img9{
+        background-image: url("https://i.pinimg.com/564x/f1/75/11/f17511488a37e64c977c316c4a479349.jpg");
+        background-size: cover;
+
+      }
+      .img10{
+        background-image: url("https://i.pinimg.com/564x/22/f3/b8/22f3b8dde0af6932383a0ff6073be1f1.jpg");
+        background-size: cover;
+
+      }
+      
+      .middle {
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 15%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%)
+      }
+      
+      .containerLOL:hover .image {
+        opacity: 0.3;
+      }
+      
+      .containerLOL:hover .middle {
+        opacity: 1;
+      }
+      
+      .text {
+        color: black;
+        font-size: 12px;
+        padding: 1px 32px;
+      }
+</style>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Jquery</title>
+
+</head>
+
+<body class="bg-dark text-light">
+
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">JQuery</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="afq.html">Accordion FAQs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Imenu.html">Interactive Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ImageGallery.html">Image Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="calculator.html">Dynamic Price Calculator</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <h1 class="display-4 d-flex justify-content-center">
+      Movie
+    </h1>
+  </div>
+  <h2 class="mx-3">Categories</h2>
+  <div class="line mx-3"></div>
+  <div class="container mx-1">
+      <button type="button" class="btn btn-outline-light mx-2">Action</button>
+      <button type="button" class="btn btn-outline-light mx-2">Thriller</button>
+      <button type="button" class="btn btn-outline-light mx-2">Crimes</button>
+  </div>
+  </div>
+  <div class="items">
+    <div class="img img1 mx-4 my-4 "></div>
+    <div class="img img2 mx-4 my-4 "></div>
+    <div class="img img3 mx-4 my-4 "></div>
+    <div class="img img4 mx-4 my-4 "></div>
+    <div class="img img5 mx-4 my-4 "></div>
+    <div class="img img6 mx-4 my-4 "></div>
+    <div class="img img7 mx-4 my-4 "></div>
+    <div class="img img8 mx-4 my-4 "></div>
+    <div class="img img9 mx-4 my-4 "></div>
+    <div class="img img10 mx-4 my-4 "></div>
+
+
+
+
+
+
+  </div>
+  <script> 
+    $(document).ready(function(){
+      $("button").click(function(){
+        $("p").toggle();
+      });
+    });
+  </script>
+</body>
+</html>
