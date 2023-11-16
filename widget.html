@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Jquery</title>
+
+</head>
+
+<body class="bg-dark text-light">
+
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">JQuery</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="afq.html">Accordion FAQs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="menu.html">Interactive Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ImageGallery.html">Image Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="calculator.html">Dynamic Price Calculator</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="widget.html">Tabbed Widget</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <h1 class="display-4 d-flex justify-content-center">
+      Article
+    </h1>
+  </div>
+  <div class="line mx-3"></div>
+  <div class="container mx-1">
+      <button type="button" id="Article" class="btn btn-outline-light mx-2">Article</button>
+      <button type="button" id="News"  class="btn btn-outline-light mx-2">News</button>
+      <button type="button" id="Review" class="btn btn-outline-light mx-2">Review</button>
+  </div>
+  </div>
+  <div class="card Article text-bg-dark  my-3 mx-4 mb-3" style="max-width: 200rem;">
+    <div class="card-header">The Ultimate Productivity Hack is Saying No</div>
+    <div class="card-body">
+      <h5 class="card-title">Introduction</h5>
+      <p class="card-text">
+        
+        The ultimate productivity hack is saying no.
+
+Not doing something will always be faster than doing it. This statement reminds me of the old computer programming saying, “Remember that there is no code faster than no code.”
+
+The same philosophy applies in other areas of life. For example, there is no meeting that goes faster than not having a meeting at all.
+
+This is not to say you should never attend another meeting, but the truth is that we say yes to many things we don't actually want to do. There are many meetings held that don't need to be held. There is a lot of code written that could be deleted.
+
+How often do people ask you to do something and you just reply, “Sure thing.” Three days later, you're overwhelmed by how much is on your to-do list. We become frustrated by our obligations even though we were the ones who said yes to them in the first place.
+
+It's worth asking if things are necessary. Many of them are not, and a simple “no” will be more productive than whatever work the most efficient person can muster.
+
+But if the benefits of saying no are so obvious, then why do we say yes so often?
+      </p>
+    </div>
+  </div>
+  <div class="card News text-bg-dark  my-3 mx-4 mb-3" style="max-width: 200rem; display: none;">
+    <div class="card-header">The Building of the Berlin Wall</div>
+    <div class="card-body">
+      <h5 class="card-title">Introduction</h5>
+      <p class="card-text">
+        For almost 30 years the Berlin Wall separated Germany's communist east from the US-friendly west. Constructed overnight on 12-13 August 1961 by the German Democratic Republic (East Germany), the wall's official purpose was to stop western “fascists” from entering east Germany and undermining the building of a socialist state. In reality, however, it served to prevent mass defections from east to west.
+
+Berliners awoke on 13 August to find themselves cut off from family, friends, work and in some cases even their homes - it was now impossible to get from east to west. The makeshift wall was soon replaced by a 12ft-tall, 4ft-wide reinforced concrete barrier, heavily guarded and lined with booby traps. In total at least 171 people were killed trying to get over, under or around the Berlin Wall, which stood until 9 November 1989.
+        
+      </p>
+    </div>
+  </div>
+  <div class="card Review text-bg-dark  my-3 mx-4 mb-3" style="max-width: 200rem; display: none;">
+    <div class="card-header">Review</div>
+    <div class="card-body">
+      <h5 class="card-title">Introduction</h5>
+      <p class="card-text">
+        Alexander commented : "I love eating"
+      </p>
+    </div>
+  </div>
+  
+  <script>
+
+      $("#Article").click(function(){
+        $(".Article").show();
+        $(".News").hide();
+        $(".Review").hide();
+      });
+      $("#News").click(function(){
+        $(".Article").hide();
+        $(".Review").hide();
+        $(".News").show();
+      });
+      $("#Review").click(function(){
+        $(".Article").hide();
+        $(".Review").show();
+        $(".News").hide();
+      });
+
+
+  </script>
+</body>
+</html>
